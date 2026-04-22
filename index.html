@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Master | 現代俄羅斯方塊</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <main class="game-container">
+        <header>
+            <h1>TETRIS <span>MASTER</span></h1>
+        </header>
+
+        <div class="game-layout">
+            <aside class="sidebar left">
+                <div class="stats-box glass">
+                    <h3>SCORE</h3>
+                    <div id="score">0</div>
+                </div>
+                <div class="stats-box glass">
+                    <h3>LINES</h3>
+                    <div id="lines">0</div>
+                </div>
+                <div class="stats-box glass">
+                    <h3>LEVEL</h3>
+                    <div id="level">1</div>
+                </div>
+            </aside>
+
+            <div class="canvas-wrapper glass">
+                <canvas id="tetris" width="240" height="400"></canvas>
+                <div id="overlay" class="hidden">
+                    <div class="overlay-content">
+                        <h2 id="overlay-text">PAUSED</h2>
+                        <button id="start-btn">START GAME</button>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar right">
+                <div class="preview-box glass">
+                    <h3>NEXT</h3>
+                    <canvas id="next" width="80" height="80"></canvas>
+                </div>
+                <div class="controls-guide glass">
+                    <h3>CONTROLS</h3>
+                    <ul>
+                        <li><span>← →</span> Move</li>
+                        <li><span>↑</span> Rotate CW</li>
+                        <li><span>↓</span> Soft Drop</li>
+                        <li><span>Space</span> Hard Drop</li>
+                        <li><span>Z</span> Rotate CCW</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
