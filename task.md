@@ -1,0 +1,8 @@
+- [x] 建立實作計畫
+- [x] 建立 HTML 基礎結構 (index.html)
+- [x] 建立 CSS 霓虹風格樣式 (style.css)
+- [x] 實作 Web Audio 音效系統 (audio.js)
+- [x] 實作遊戲核心邏輯 (tetris.js)
+- [x] 修正開始按鈕顯示問題
+- [x] 進行最終測試與錄影
+- [x] 更新所有文件為相對路徑格式 (GitHub 友善)
