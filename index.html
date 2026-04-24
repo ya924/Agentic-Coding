@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tetris - 現代俄羅斯方塊</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>NEON <span class="accent">TETRIS</span></h1>
+        </header>
+        
+        <main>
+            <div class="game-layout">
+                <!-- 左側：計分與狀態 -->
+                <div class="side-panel left">
+                    <div class="stat-card">
+                        <h3>SCORE</h3>
+                        <p id="score">000000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>LEVEL</h3>
+                        <p id="level">1</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>LINES</h3>
+                        <p id="lines">0</p>
+                    </div>
+                </div>
+
+                <!-- 中間：遊戲主體 -->
+                <div class="game-board-container">
+                    <canvas id="gameBoard"></canvas>
+                    <div id="overlay" class="overlay">
+                        <div class="overlay-content">
+                            <h2 id="overlayText">NEON TETRIS</h2>
+                            <button id="startBtn">START GAME</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：預覽與控制 -->
+                <div class="side-panel right">
+                    <div class="preview-card">
+                        <h3>NEXT</h3>
+                        <canvas id="nextPiece"></canvas>
+                    </div>
+                    
+                    <div class="controls-guide">
+                        <h3>CONTROLS</h3>
+                        <ul>
+                            <li><span><kbd>←</kbd><kbd>→</kbd></span> Move</li>
+                            <li><span><kbd>↑</kbd> / <kbd>X</kbd></span> Rotate CW</li>
+                            <li><span><kbd>Z</kbd></span> Rotate CCW</li>
+                            <li><span><kbd>↓</kbd></span> Soft Drop</li>
+                            <li><span><kbd>Space</kbd></span> Hard Drop</li>
+                            <li><span><kbd>P</kbd></span> Pause</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Developed by Antigravity</p>
+        </footer>
+    </div>
+
+    <!-- 腳本載入 -->
+    <script src="audio.js"></script>
+    <script src="tetris.js"></script>
+</body>
+</html>
